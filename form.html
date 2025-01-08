@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 화면</title>
+</head>
+<body>
+  <form action="index.html" method="post">
+    <fieldset>
+      <legend>검색</legend>
+      <label>이름<input type="checkbox" name="search" value="name"></label>
+      <label>별명<input type="checkbox" name="search" value="nick"></label>
+      <label></label>
+    </fieldset>
+    <fieldset>
+      <legend>성별</legend>
+      <label for="male">남성</label><input type="radio" name="gender" id="male" value="men">
+      <label for="female">여성</label><input type="radio" name="gender" id="female" value="women">
+    </fieldset>
+    <fieldset>
+      <legend>추가정보</legend>
+      <label for="birth">생년월일</label><input type="time" name="birth" id="birth">
+      <label for="range">범위</label><input type="range" name="range" id="range" min="1" max="10">
+    </fieldset>
+    <fieldset>
+      <legend>사용자정보</legend>
+      <label>사용자아이디: <input type="text" name="userId" value="admin"></label>
+      <label>비밀번호: <input type="password" name="userPw" value="admin">
+      <label for="userEmail">이메일: </label>
+      <input type="email" id="userEmail">
+    </fieldset>
+    <fieldset>
+      <legend>버튼</legend>
+      <input type="submit" value="로그인">
+      <input type="reset" value="초기화">
+    </fieldset>
+  </form>
+</body>
+</html>
