@@ -5,12 +5,11 @@ members[0] = {member_id: "user01", member_name: "홍길동",point: 80}
 members[1] = {member_id: "user02", member_name: "신현욱",point: 90}
 members[2] = {member_id: "user03", member_name: 내친구, point: 85}
 
-let run = true;
-while (run) {
+
+while (true) {
   let searchName = prompt("찾을 친구 이름 입력: ");
   if (searchName == 'stop') {
-    run = false;
-    break;
+   break;
   }
     let exists = false; // 존재여부를 담아놓기.
   for (let i = 0; i < members.length; i++) {
