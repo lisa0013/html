@@ -1,7 +1,7 @@
 // condition4.js
 
 const obj = {
-  mane: "홍길동",
+  name: "홍길동",
   age: 20,
   showName: function () { //메소드.
     console.log(obj.name);
