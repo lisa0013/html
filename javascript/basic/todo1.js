@@ -2,12 +2,7 @@
 
 //두 수:1 ~ 100까지 임의수 생성
 //두 수를 더한 값이 
-<<<<<<< HEAD
-//let sumEven = 10; // 짝수의 값은 sumEven에 합하기.
-//let sumOdd = 20;  //홀수의 값은 sumOdd에 합하기.
 
-
-=======
 
 let number1 = parseInt(Math.random() * 100) + 1;
 let number2 = parseInt(Math.random() * 100) + 1;
@@ -88,4 +83,4 @@ if (Num1 < Num2) {
     console.log(Num3);
   }
 }
->>>>>>> 15f8a508c0c4dbd87b8d4b63b515ce8e8259f79c
+
