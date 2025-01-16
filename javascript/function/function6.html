@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ 
+ 
+<button>버튼입니다</button>
+
+<script>
+// 이벤트 - 이벤트핸들러.
+let item = document.querySelector('button');
+console.log(item);
+
+item.addEventListener('click', function(){
+  alert('마우스가 클릭됨');
+});
+ 
+item.addEventListener('mouseover', function(){
+ item.style.backgroundColor = 'yellow';
+});
+
+document.querySelector('button').addEventListener('mouseout', function(){
+  item.style.backgroundColor = null;
+ });
+
+ let numAry1 = [1,2,3,4];
+
+function arraySum(numAry = []){
+  let sum =0;
+  for(let i = 0; i < numAry.length; i ++){
+    sum += numAry[i];
+  }
+  console.log('합계: ' + sum);
+  return {"사과":"맛있어"};
+} // end of arraySum()
+
+let result = arraySum(numAry1); 
+console.log(arraySum(numAry1).사과);
+console.log(result.사과);
+
+
+
+// function.js : 메소드.
+// this: object일 때 object 자신을 가리킴. 
+let obj = {
+  name: "홍길동",
+  birth: "1998-05-01",
+  bloodType: "O",
+  showInfo: function () {
+    console.log(`이름은 ${this.name}, 생일은 ${this.birth} 입니다.`);
+  },
+  addNumber: function (num1 = 0, num2 = 0){
+    return num1 + num2;
+  },
+  calculateFnc: function(num1 = 0, num2 = 0, calFnc){
+    return calFnc(num1, num2);
+  }
+}
+
+obj.showInfo();
+console.log(obj.addNumber(30, 40));   
+
+var calFnc = function(num1,num2){
+alert(num1);
+}
+
+
+obj.calculateFnc(300,10,calFnc)
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

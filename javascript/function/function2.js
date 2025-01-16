@@ -22,9 +22,10 @@ function getMax(ary = []) { // 매개변수로 받은 값 중에서 제일 큰 �
     }
   }
   console.log(`제일 큰 값은 ${max}입니다.`);
-  return max; // 함수를 호출한 영역으로 반환.
+  return {"apple":"사과입니다."}; // 함수를 호출한 영역으로 반환.
 } // end of getMax()
-
-document.write(getMax(ary1));
+let result = getMax(ary1);
+result.apple;
+document.write(getMax(ary1).apple);
 // alert(getMax(ary2));
 getMax(ary3);

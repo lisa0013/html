@@ -14,6 +14,9 @@ let obj = {
     return calFnc(num1, num2);
   }
 }
+obj.name
+obj.showInfo();
+obj.addNumber(10, 40);
 
 obj.showInfo();
 // alert(obj.addNumber(10, 12));
