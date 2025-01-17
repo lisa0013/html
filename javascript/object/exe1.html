@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exe1.heml 작성.</title>
+</head>
+<body>
+  이름: <input type="text" name="friend" value="홍길동">
+  <button>친구추가</button>
+  <button name="remove">친구삭제</button>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>이름</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+  <script>
+    // 추가이벤트 등록.
+    document.querySelector('button').addEventListener('click', function(){
+      let name = document.querySelector('input[name="friend"]').value;
+      friendAry.push(name); // 배열추가.
+      makeList();
+      // 초기화.
+      document.querySelector('input[name="friend"]').value = '';
+    });
+
+    // 삭제이벤트 등록.
+    // document.querySelector('button[name="remove"]').addEventListener('click', function(){
+    //   friendAry.pop(); 
+    //   makeList();
+    // });
+
+    // 삭제이벤트 등록.
+    document.querySelector('button[name="remove"]').addEventListener('click', function(){
+      let searchname = document.querySelector('input[name="friend"]').value;
+      let pos = friendAry.indexOf(searchname);
+      if(pos == -1){
+        alert('찾는 이름이 없습니다');
+      }
+      // 특정 위치 값 삭제.
+      friendAry.splice(pos, 1);
+      makeList();
+    });
+
+    let friendAry = ['정명한', '김지수','고영서','이민영', '정은애']
+    let targetItem = document.querySelector('#list'); // tbody
+    
+    // 이름 출력.
+    function makeList(){
+    let html = '';
+    friendAry.forEach(function(item, idx, ary){
+      html += `<tr><td>${item}</tr></td>`;
+    });
+    targetItem.innerHTML = html;
+    }
+    makeList(); // 실행.
+    
+  </script>
+</body>
+</html>
