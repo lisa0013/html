@@ -10,7 +10,7 @@ myFriends.push({name: "석지욱", escore: 95, kescore: 55, gender: 'Female'});
 //   console.log(`${item.name}`);
 // });
 
-// forEach: 콘솔출력 영어점수가 90이상.
+//forEach: 콘솔출력 영어점수가 90이상.
 // myFriends.forEach(function(item, idx, ary){
 //   if (90 <= item.escore) {
 //     console.log(`${item.escore}`);
@@ -18,6 +18,7 @@ myFriends.push({name: "석지욱", escore: 95, kescore: 55, gender: 'Female'});
 // });
 
 // forEach: 콘솔출력 평균점수가 80이상.
+let sum = 0, avg = 0, cnt = 0; 
 // myFriends.forEach(function(item, idx, ary){
 //      sum = item.escore + item.kescore
 //      avg = sum / 2
@@ -27,7 +28,6 @@ myFriends.push({name: "석지욱", escore: 95, kescore: 55, gender: 'Female'});
 //    });
 
 // forEach: 콘솔출력 여학생의 영어평균.
-let sum = 0, avg = 0, cnt = 0;
  myFriends.forEach(function(item, idx, ary){
      if (item.gender == 'Female') {
        sum +=  item.escore;

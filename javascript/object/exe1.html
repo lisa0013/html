@@ -6,8 +6,8 @@
   <title>exe1.heml 작성.</title>
 </head>
 <body>
-  이름: <input type="text" name="friend" value="홍길동">
-  <button>친구추가</button>
+  <label >이름:</label> <input  type="text" name="friend" value="홍길동">
+  <button id="add">친구추가</button>
   <button name="remove">친구삭제</button>
   <table border="1">
     <thead>
@@ -19,7 +19,7 @@
   </table>
   <script>
     // 추가이벤트 등록.
-    document.querySelector('button').addEventListener('click', function(){
+    document.querySelector('#add').addEventListener('click', function(){
       let name = document.querySelector('input[name="friend"]').value;
       friendAry.push(name); // 배열추가.
       makeList();
@@ -52,8 +52,9 @@
     function makeList(){
     let html = '';
     friendAry.forEach(function(item, idx, ary){
-      html += `<tr><td>${item}</tr></td>`;
+      html += `<tr><td>${item}</td></tr>`;
     });
+   
     targetItem.innerHTML = html;
     }
     makeList(); // 실행.

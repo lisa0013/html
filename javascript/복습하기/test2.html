@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>사원번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>주소</th>
+        <th>성별</th>
+        <th>입사년월</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+
+  <br>
+<label for="num">사원번호</label>
+<input type="text" id="num"><br>
+<label for="name">이름</label>
+<input type="text" id="name"><br>
+<label for="age">나이</label>
+<input type="text" id="age"><br>
+<label for="addr">주소</label>
+<input type="text" id="addr"><br>
+<label for="gender">성별</label>
+<input type="text" id="gender"><br>
+<label for="date">입사년월</label>
+<input type="text" id="date">
+  <script>
+    let employees = [{
+        employeeId: 101,
+        name: "John Doe",
+        age: 30,
+        address: "123 Main St, New York, NY",
+        gender: "Male",
+        hireYear: 2015
+      },
+      {
+        employeeId: 102,
+        name: "Jane Smith",
+        age: 28,
+        address: "456 Maple Ave, Los Angeles, CA",
+        gender: "Female",
+        hireYear: 2018
+      },
+      {
+        employeeId: 103,
+        name: "Michael Johnson",
+        age: 35,
+        address: "789 Oak Dr, Chicago, IL",
+        gender: "Male",
+        hireYear: 2012
+      },
+      {
+        employeeId: 104,
+        name: "Emily Davis",
+        age: 32,
+        address: "321 Pine Rd, Houston, TX",
+        gender: "Female",
+        hireYear: 2016
+      },
+      {
+        employeeId: 105,
+        name: "David Brown",
+        age: 29,
+        address: "654 Elm St, Phoenix, AZ",
+        gender: "Male",
+        hireYear: 2020
+      }
+    ];
+    let targetItem = document.querySelector('#list');
+    console.log(employees);
+
+    function makeList() {
+      let html = '';
+      employees.forEach(function (item, idx, ary) {
+        html += `<tr class='row'>`;
+        html += `<td>${item.employeeId}</td>`;
+        html += `<td>${item.name}</td>`;
+        html += `<td>${item.age}</td>`;
+        html += `<td>${item.address}</td>`;
+        html += `<td>${item.gender}</td>`;
+        html += `<td>${item.hireYear}</td>`;
+        html += `</tr>`;
+      });
+      targetItem.innerHTML = html;
+    }
+    makeList(); // 실행.
+
+
+  let elements = document.querySelectorAll('.row');
+  elements.forEach(function(item, idx, ary){
+    item.addEventListener('click', function(){
+      console.log(employees[idx].employeeId);
+      console.log(employees[idx].name);
+      console.log(employees[idx].age);
+      console.log(employees[idx].address);
+      console.log(employees[idx].gender);
+      console.log(employees[idx].hireYear);
+      document.querySelector('#num').value = employees[idx].employeeId;
+      document.querySelector('#name').value = employees[idx].name;
+      document.querySelector('#age').value = employees[idx].age;
+      document.querySelector('#addr').value = employees[idx].addressd;
+      document.querySelector('#gender').value = employees[idx].gender;
+      document.querySelector('#date').value = employees[idx].hireYear;
+    });
+  });
+  </script>
+
+</body>
+
+</html>

@@ -3,10 +3,11 @@
 let numAry = [20, 13, 45, 62, 19];
 let sum = 0;
 let max = 0;
+
 numAry.forEach(function (item, idx, ary) {
   //console.log(`item => ${item}`);
   if (idx % 2 == 0) {
-console.log(`item ${item}`);
+    console.log(`item: ${item}`);
     sum += item;
   }
   // 큰값.

@@ -1,25 +1,28 @@
 // object4.js
 // 1일의 요일이 뭔지, 막날이 뭔지 알아야 달력 만듦.
 let month = 2;
-let date = 0;
+let date = 1;
 let year = 2024;
 
 let today = new Date();
 today.setFullYear(year);
 today.setMonth(month);
 today.setDate(date);
+console.log(today);
 
 today = new Date(2024, 4, 3, 15, 30, 22 );
-
+console.log(today);
 //console.log(today, today.getDate());
-console.clear();
-let a = {};
-let b = {};
+//console.clear();
+let a = {name:10};
+let b = {age:10};
 console.log(a == b);
+console.log(a.name == b.age);
 
 today = new Date();
 let now = new Date();
-console.log(today.getTime() == now.getTime());
+console.log("여기");
+console.log( today.getTime() == now.getTime());
 
 
 console.log(new Date(now.getTime()));
