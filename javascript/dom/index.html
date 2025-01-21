@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="dom1.js"></script>
+</head>
+<body>
+  <h3>등록</h3>
+  <div id="addMember">
+    <form name="myForm" action="#">
+      회원ID: <input type="text" name="member_id" value="admin"><br>
+      회원이름: <input type="text" name="member_name" value="홍길동"><br>
+      회원점수: <input type="number" name="member_point" value="123"><br>
+      <input type="submit" value="등록">
+      <input type="reset" value="초기화">
+    </form>
+  </div>
+
+
+  <h3>목록</h3>
+  <div id="memberList">
+    <table border="1">
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th>회워ID</th>
+          <th>회원이름</th>
+          <th>점수</th>
+          <th>삭제</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>guest</td>
+          <td>김손님</td>
+          <td>180</td>
+          <td><buttion>삭제</buttion></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

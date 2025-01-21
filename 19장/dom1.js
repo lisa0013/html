@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     item.appendChild(txt); // 부모.appendChild(자식)
 
-    
+  
     console.log(item);
     document.querySelector('#detail>ul').appendChild(item);
   });
