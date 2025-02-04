@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	font-family: "맑은 고딕";
+}
+
+#container {
+	width: 1000px;
+	margin: auto;
+
+}
+
+nav>ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 10px;
+}
+
+.topMenu>li {
+	float: left;
+}
+
+.topMenu>li>a:hover {
+	background-color: pink;
+	color: black;
+}
+
+form {
+	width: 500px;
+	text-align: center;
+	background-color: #ccc;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	font-weight: bold;
+}
+
+section {
+
+}
+
+label {
+	display: inline-block;
+	width: 130px;
+}
+
+input {
+	display: inline-block;
+	width: 250px;
+	padding: 3px;
+}
+.submit {
+	border: none;
+	border-radius: 30px;
+	background-color: #ddd;
+	padding: 15px;
+	margin: 10px;
+}
+
+.reset {
+	border: none;
+	border-radius: 30px;
+	background-color: #ddd;
+	padding: 15px;
+	margin: 10px;
+}
